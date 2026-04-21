@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaleda's Kitchen - Chicken Nuggets Label</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f1f3f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Elegant Dark Pattern */
+        .elegant-bg {
+            background-color: #121212;
+            position: relative;
+            overflow: hidden;
+        }
+        .elegant-bg::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.15;
+        }
+
+        .cursive-brand {
+            font-family: 'Playball', cursive;
+        }
+
+        .label-container {
+            width: 920px;
+            height: 500px;
+            background: white;
+            display: flex;
+            border-radius: 50px;
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            border: 12px solid white;
+        }
+
+        .right-panel {
+            background: linear-gradient(135deg, #f39c12 0%, #d35400 100%);
+            flex: 1;
+            position: relative;
+        }
+
+        .curved-divider {
+            position: absolute;
+            left: -1px;
+            top: 0;
+            height: 100%;
+            width: 80px;
+            fill: #121212;
+            z-index: 10;
+        }
+
+        .glass-badge {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .gold-text {
+            color: #f1c40f;
+        }
+
+        .chef-logo-container {
+            width: 90px;
+            height: 90px;
+            background: white;
+            border-radius: 50%;
+            padding: 6px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chef-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .footer-banner {
+           
+            backdrop-filter: blur(4px);
+            margin: 0 -32px -32px -64px; /* Negates right-panel padding */
+            padding: 10px 32px 10px 64px;
+            width: calc(100% + 96px);
+        }
+
+        @media print {
+            body { background: white; }
+            .no-print { display: none; }
+            .label-container { box-shadow: none; border: 1px solid #eee; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="label-container">
+        <!-- Left Panel (Dark Elegant) -->
+        <div class="w-[38%] elegant-bg p-10 flex flex-col z-0">
+            <!-- Branding -->
+            <div class="mb-12">
+                <h2 class="cursive-brand gold-text text-5xl mb-1 leading-none">Khaleda's</h2>
+                <p class="text-white tracking-[0.4em] text-[11px] font-bold opacity-60 uppercase">The Gourmet Kitchen</p>
+            </div>
+
+            <!-- Ingredients -->
+            <div class="text-white flex-1">
+                <h4 class="gold-text font-bold text-lg mb-4 border-b border-white/10 pb-1 inline-block">
+                    উপাদানসমূহ: 
+                </h4>
+                <ul class="space-y-3 text-[13px] opacity-90 font-medium">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle gold-text text-[10px]"></i> ফ্রেশ মুরগীর মাংস</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle gold-text text-[10px]"></i> ডিম, প্রিমিয়াম ব্রেড ক্রাম্বস</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle gold-text text-[10px]"></i> আদা, রসুন ও গোলমরিচ</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle gold-text text-[10px]"></i> সয়াবিন তেল ও সিক্রেট সস</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle gold-text text-[10px]"></i> আমাদের নিজস্ব সেরা মশলা</li>
+                </ul>
+            </div>
+
+            <!-- Weight and Price -->
+            <div class="space-y-2 mt-2">
+                <div class="glass-badge rounded-xl p-2 px-4 w-1/2 flex justify-between items-center text-white">
+                    <span class="text-[9px] uppercase font-bold opacity-50 tracking-widest">Weight</span>
+                    <span class="text-base">200 gm</span>
+                </div>
+                <div class="glass-badge rounded-xl p-2 px-4 w-1/2 flex justify-between items-center text-white border-l-4 border-l-[#f1c40f]">
+                    <span class="text-[9px] uppercase font-bold opacity-50 tracking-widest">Price</span>
+                    <span class="font-semibold gold-text text-xl">৳ ২০০</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel (Orange Gradient) -->
+        <div class="right-panel p-8 pl-16 flex flex-col items-center text-center">
+            <!-- Decorative Curve -->
+            <svg class="curved-divider" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 C 70 0, 70 100, 0 100 Z"></path>
+            </svg>
+
+            <!-- Lady Chef Cartoon Logo -->
+            <div class="chef-logo-container mb-4">
+                <img src="/female-chef-cartoon-png-image_11378632.png" alt="Lady Chef" class="chef-image">
+            </div>
+
+            <!-- Product Title -->
+            <div class="mb-4">
+                <h1 class="text-6xl font-black text-white mb-0 drop-shadow-2xl italic tracking-tight">
+                    চিকেন নাগেট
+                </h1>
+                <p class="text-white/80 font-bold tracking-[0.25em] text-[10px] uppercase mt-0.5">Authentic Homemade Flavor</p>
+            </div>
+
+            <!-- Cooking Instructions -->
+            <div class="w-full bg-white/10 backdrop-blur-lg rounded-[2rem] p-4 border border-white/20 text-white mb-3">
+                <h5 class="font-bold text-xs mb-1.5 gold-text flex items-center justify-center gap-2">
+                    <i class="fas fa-utensils"></i> প্রস্তুত প্রণালী
+                </h5>
+                <p class="text-[13px] leading-relaxed font-medium">
+                    প্যাকেট থেকে বের করে ডুবো তেলে ৫-৭ মিনিট হালকা আঁচে বাদামী করে ভাজুন। গরম গরম পরিবেশন করুন।
+                </p>
+            </div>
+
+            <!-- Storage & Dates -->
+            <div class="w-full space-y-4">
+                <div class="flex justify-center">
+                    <div class="bg-black/20 text-white px-5 py-1.5 rounded-full text-[10px] font-bold flex items-center gap-3 border border-white/10">
+                        <i class="fas fa-snowflake gold-text"></i> সংরক্ষণঃ -১৮° সে. বা তার নিচে
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 px-2">
+                    <div class="text-left">
+                        <label class="text-[9px] uppercase font-bold text-white/70 block mb-1 ml-1">উৎপাদন তারিখ</label>
+                        <div class="h-9 bg-white/10 rounded-xl border border-white/20 flex items-center px-4 text-xs font-bold text-white/50 italic">
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <label class="text-[9px] uppercase font-bold text-white/70 block mb-1 ml-1">মেয়াদ উত্তীর্ণ</label>
+                        <div class="h-9 bg-white/10 rounded-xl border border-white/20 flex items-center px-4 text-xs font-bold text-white/50 italic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Banner -->
+            <div class="mt-2 w-full footer-banner flex justify-between items-center text-[13px] text-white font-black tracking-tight uppercase">
+                <span class="flex items-center gap-2"><i class="fas fa-certificate gold-text text-sm"></i> 100% HALAL</span>
+                <span class="flex items-center gap-2"><i class="fas fa-heart gold-text text-sm"></i> NO PRESERVATIVES</span>
+                <span class="flex items-center gap-2"><i class="fas fa-phone-alt gold-text text-sm"></i> 01706273132</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Control (Invisible on Print)
+    <div class="no-print fixed bottom-10 flex gap-4">
+        <button onclick="window.print()" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-full font-bold shadow-xl transition-all flex items-center gap-2">
+            <i class="fas fa-print"></i> Print Sticker
+        </button>
+    </div> -->
+
+</body>
+</html>
